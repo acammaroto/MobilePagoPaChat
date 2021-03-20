@@ -50,7 +50,6 @@ Finally, you can start your server using the command listed at the start of this
 # **Let's talk about the client app**
 
 ## **Create a chat room**
-<hr>
 
 To get started on the actual coding, navigate to ***ChatRoomViewController.swift***.  This view controller is ready and able to receive strings from an input bar. It can also display messages using a table view with custom cells configured with ``` Message```  objects.
 
@@ -88,7 +87,6 @@ class ChatRoom: NSObject {
 ```
 
 ## **Opening a Connection**
-<hr>
 
 Using the following method we can open a conncetion with the server. 
 ```swift
@@ -127,7 +125,6 @@ outputStream = writeStream!.takeRetainedValue()
 ```
 
 ## **The communication Protocol**
-<hr>
 
 One advantage of dropping down to the TCP level is that we can define our own “protocol” for deciding whether a message is valid or not.
 
@@ -176,7 +173,7 @@ func joinChat(username: String) {
 ![](./readme_files/join_chat_ok.png)
 
 ## **Reacting to Incoming Messages**
-<hr>
+
 
 The server sends incoming messages like the join message you just sent to everyone in the room, including you. As fortune would have it, the app is already set up to show any type of incoming message as a cell in the ChatRoomViewController‘s table of messages.
 
@@ -214,7 +211,7 @@ Next, we have to add this implementation of stream(_:handle:) to the extension t
 
 
 ## **Creating the ChatRoomDelegate Protocol**
-<hr>
+
 
 To tell to the ChatRoomViewController.swift about new messages and status changes and avoid circular dependency we can use again protocols and delegate.
 
@@ -258,7 +255,7 @@ extension ChatRoomViewController: ChatRoomDelegate {
 🎉 The chat room now successfully shows a cell stating that you've entered the room. We've officially sent a message to and received a message from a socket-based TCP server.
 
 ## **Sending Messages**
-<hr>
+
 
 To send and receive messages, we can use the following method declared in the ChatRoom.swift
 
@@ -290,7 +287,7 @@ This method is just like joinChat(username:), which I wrote earlier, except that
 
 
 ## **Handle Connection Error Properly**
-<hr>
+
 
 To tell to our ChatRoomViewController.swift there is something wrong, in particular the server is unreachable or there are some problems on the I/O streams we can use the ```didConnectionFailsWithError``` function described in the ChatRoomDelegate protocol:
 
@@ -332,7 +329,7 @@ In this way every time the streams will get an error the ChatRoomController.swif
 </p>
 
 ## **Cleaning up After Yourself**
-<hr>
+
 
 To be a good citizens, when we open a socket connection you should close it when we're done, just as we would with files or similar things.
 To do it, in ChatRoom.swift we use the following method:
