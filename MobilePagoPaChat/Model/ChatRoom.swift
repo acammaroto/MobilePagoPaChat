@@ -51,22 +51,21 @@ class ChatRoom: NSObject {
     
     func joinChat(username: String) {
         let data = "iam:\(username)".data(using: .utf8)!
-        
         self.username = username
-        
-        _ = data.withUnsafeBytes {
-            guard let pointer = $0.baseAddress?.assumingMemoryBound(to: UInt8.self) else {
-                print("Error joining chat")
-                return
-            }
-            outputStream.write(pointer, maxLength: data.count) 
-            
-        }
+        writeOnStream(data: data)
     }
     
     func send(message: String) {
         let data = "msg:\(message)".data(using: .utf8)!
-        
+        writeOnStream(data: data)
+    }
+    
+    func stopChatSession() {
+        inputStream.close()
+        outputStream.close()
+    }
+    
+    func writeOnStream(data: Data) {
         _ = data.withUnsafeBytes {
             guard let pointer = $0.baseAddress?.assumingMemoryBound(to: UInt8.self) else {
                 print("Error joining chat")
@@ -75,11 +74,6 @@ class ChatRoom: NSObject {
           outputStream.write(pointer, maxLength: data.count)
             
         }
-    }
-    
-    func stopChatSession() {
-        inputStream.close()
-        outputStream.close()
     }
     
 }

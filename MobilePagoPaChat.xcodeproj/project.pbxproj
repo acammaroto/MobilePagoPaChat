@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D796919526063533004E119B /* JoinChatViewController+TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D796919426063533004E119B /* JoinChatViewController+TextField.swift */; };
+		D796919A26063977004E119B /* ChatTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D796919926063977004E119B /* ChatTextField.swift */; };
 		D7D60E0B26032B2D00C88683 /* ChatRoomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D60E0A26032B2D00C88683 /* ChatRoomTests.swift */; };
 		D7D60E102603ABA700C88683 /* server in Resources */ = {isa = PBXBuildFile; fileRef = D7D60E0F2603ABA700C88683 /* server */; };
 		D7D60E152603ABAF00C88683 /* server.go in Resources */ = {isa = PBXBuildFile; fileRef = D7D60E142603ABAF00C88683 /* server.go */; };
@@ -46,6 +48,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D796919426063533004E119B /* JoinChatViewController+TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JoinChatViewController+TextField.swift"; sourceTree = "<group>"; };
+		D796919926063977004E119B /* ChatTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTextField.swift; sourceTree = "<group>"; };
 		D7D60E0A26032B2D00C88683 /* ChatRoomTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomTests.swift; sourceTree = "<group>"; };
 		D7D60E0F2603ABA700C88683 /* server */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = server; sourceTree = "<group>"; };
 		D7D60E142603ABAF00C88683 /* server.go */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = server.go; sourceTree = "<group>"; };
@@ -171,6 +175,7 @@
 			children = (
 				D7E4F4492601E7C500837381 /* MessageInputView.swift */,
 				D7E4F4532601E83B00837381 /* MessageTableViewCell.swift */,
+				D796919926063977004E119B /* ChatTextField.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -181,6 +186,7 @@
 				D7E4F3FE2601DF0800837381 /* JoinChatViewController.swift */,
 				D7E4F43F2601E3A600837381 /* ChatRoomViewController.swift */,
 				D7E4F44E2601E80200837381 /* ChatRoomViewController+Table.swift */,
+				D796919426063533004E119B /* JoinChatViewController+TextField.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -321,11 +327,13 @@
 				D7E4F3FF2601DF0800837381 /* JoinChatViewController.swift in Sources */,
 				D7E4F4592601E86700837381 /* Label.swift in Sources */,
 				D7E4F4332601DF8100837381 /* Message.swift in Sources */,
+				D796919526063533004E119B /* JoinChatViewController+TextField.swift in Sources */,
 				D7E4F4352601DF8100837381 /* StringExtension.swift in Sources */,
 				D7E4F4542601E83B00837381 /* MessageTableViewCell.swift in Sources */,
 				D7E4F44F2601E80200837381 /* ChatRoomViewController+Table.swift in Sources */,
 				D7E4F4342601DF8100837381 /* MessageSenderType.swift in Sources */,
 				D7E4F3FB2601DF0800837381 /* AppDelegate.swift in Sources */,
+				D796919A26063977004E119B /* ChatTextField.swift in Sources */,
 				D7E4F4452601E3D600837381 /* ChatRoom.swift in Sources */,
 				D7E4F44A2601E7C500837381 /* MessageInputView.swift in Sources */,
 			);
