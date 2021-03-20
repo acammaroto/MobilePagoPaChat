@@ -10,7 +10,7 @@ import (
   "bytes"
 )
 
-//UGHHHHH ...
+
 var (
 	CHOST = "127.0.0.1"
 	CPORT = "10000"
